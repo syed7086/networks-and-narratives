@@ -2,6 +2,18 @@
 
 Next.js portfolio migrated from the Google Stitch export, preserving the **Nocturnal Earth** design system.
 
+## Requirements
+
+- **Node.js 20** (see `.nvmrc`). Next.js 16 does not run on Node 12.
+
+If `node -v` shows v12, use [nvm](https://github.com/nvm-sh/nvm) (already installed on this machine):
+
+```bash
+nvm use          # uses .nvmrc → Node 20
+npm install
+npm run dev
+```
+
 ## Quick start
 
 ```bash
