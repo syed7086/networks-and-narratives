@@ -52,3 +52,21 @@ npm run build  # verify before opening PR
 ## Phases
 
 Track work in [PHASES.md](./PHASES.md) and [GitHub Issues](https://github.com/syed7086/networks-and-narratives/issues).
+
+## Helper script
+
+Create a branch for an issue (1–12):
+
+```bash
+./scripts/new-issue-branch.sh 3   # → phase-2/3-education-data
+```
+
+## Agent / Cursor workflow
+
+When implementing changes via Cursor Agent:
+
+1. Branch from latest `main` (never commit on `main`)
+2. Push the feature branch only
+3. Open or update a PR; **you merge on GitHub**
+
+`main` has branch protection: pull requests are required before merge.

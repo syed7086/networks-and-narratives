@@ -29,3 +29,5 @@ git push -u origin phase-2/education-data
 ```
 
 Then open a PR on GitHub and merge when satisfied.
+
+Or use the helper: `./scripts/new-issue-branch.sh 3`
