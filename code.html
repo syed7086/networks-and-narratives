@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#1d445d",
+                    "surface": "#17130f",
+                    "secondary-container": "#574724",
+                    "on-tertiary-fixed-variant": "#244a63",
+                    "on-tertiary": "#06344c",
+                    "on-primary": "#482904",
+                    "background": "#17130f",
+                    "primary-container": "#d4a373",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#261a00",
+                    "tertiary-fixed-dim": "#a6cbe9",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface-bright": "#3d3834",
+                    "on-primary-container": "#5b3912",
+                    "secondary-fixed-dim": "#dcc497",
+                    "primary-fixed-dim": "#f0bd8b",
+                    "surface-container": "#231f1b",
+                    "surface-container-high": "#2e2925",
+                    "surface-container-low": "#1f1b17",
+                    "on-primary-fixed": "#2c1600",
+                    "surface-dim": "#17130f",
+                    "on-secondary": "#3d2e0e",
+                    "inverse-surface": "#eae1db",
+                    "secondary-fixed": "#f9dfb1",
+                    "primary": "#f2be8c",
+                    "inverse-primary": "#7d562d",
+                    "on-error-container": "#ffdad6",
+                    "secondary": "#dcc497",
+                    "outline": "#9c8e82",
+                    "on-secondary-container": "#cdb68a",
+                    "tertiary-container": "#8cb1ce",
+                    "on-secondary-fixed-variant": "#554422",
+                    "surface-variant": "#393430",
+                    "error-container": "#93000a",
+                    "primary-fixed": "#ffdcbd",
+                    "on-surface-variant": "#d4c4b7",
+                    "surface-container-highest": "#393430",
+                    "surface-container-lowest": "#110d0a",
+                    "on-surface": "#eae1db",
+                    "inverse-on-surface": "#342f2c",
+                    "tertiary": "#a7ccea",
+                    "on-primary-fixed-variant": "#623f18",
+                    "on-background": "#eae1db",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#50453b",
+                    "surface-tint": "#f0bd8b",
+                    "on-tertiary-fixed": "#001e2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "max-width": "1440px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "unit": "4px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["EB Garamond"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["EB Garamond"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["EB Garamond"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "mono": ["JetBrains Mono", "monospace"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #17130f;
+            color: #eae1db;
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(23, 19, 15, 0.9);
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(242, 190, 140, 0.05);
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            animation: scanline 6s linear infinite;
+        }
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10">
+<nav class="flex justify-between items-center px-8 md:px-16 mx-auto h-20 w-full max-w-[1440px]">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight flex items-center gap-2">
+<span class="font-mono text-primary text-sm opacity-50">&lt;/&gt;</span>
+            SYED
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-mono text-[11px] uppercase tracking-wider text-primary border-b border-primary pb-1 transition-all duration-300" href="#hero">01. Home</a>
+<a class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="#about">02. Profile</a>
+<a class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="#networking">03. Systems</a>
+<a class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="#stack">04. Stack</a>
+<a class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="#photography">05. Visuals</a>
+</div>
+<button class="font-mono text-[11px] uppercase tracking-widest text-primary border border-primary/30 px-6 py-2 hover:bg-primary/10 transition-all duration-300">
+            [Connect]
+        </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 px-8 md:px-16 overflow-hidden" id="hero">
+<div class="z-10 text-center max-w-4xl">
+<div class="inline-block bg-surface-container-high border border-outline-variant/30 px-4 py-2 rounded mb-8 font-mono text-[13px] text-primary/80 animate-pulse">
+                [root@syed ~]$ status --current-focus
+            </div>
+<h1 class="font-display-lg text-[100px] md:text-[180px] leading-[0.85] mb-8 select-none">Syed</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto mb-12 tracking-wide italic">
+                A fresh graduate and networking aspirant building the future of digital connectivity.
+            </p>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="inline-block font-mono text-[12px] uppercase tracking-[0.2em] bg-primary text-on-primary px-10 py-4 hover:brightness-110 transition-all duration-300" href="#networking">
+                    Execute Terminal
+                </a>
+<a class="inline-block font-mono text-[12px] uppercase tracking-[0.2em] border border-outline-variant px-10 py-4 hover:border-primary transition-all duration-300" href="#photography">
+                    Sensor Data
+                </a>
+</div>
+</div>
+<!-- Ambient Background Element -->
+<div class="absolute inset-0 pointer-events-none opacity-10">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[150px]"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-8 md:px-16 max-w-[1440px] mx-auto border-t border-outline-variant/30" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-4">
+<span class="font-mono text-[11px] uppercase tracking-widest text-secondary mb-4 block">System Info</span>
+<h2 class="font-headline-md text-headline-md">Fresh Graduate &amp; Networking Aspirant</h2>
+</div>
+<div class="md:col-span-7 md:col-start-6">
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant mb-8">
+                    I am a recent graduate dedicated to mastering the architecture of the invisible. Currently actively pursuing my <b>CCNA Certification</b>, I focus on the intersection of robust network infrastructure and elegant creative storytelling.
+                </p>
+<div class="grid grid-cols-2 gap-8 font-mono text-[13px]">
+<div class="space-y-2">
+<div class="text-secondary opacity-70">// EDUCATION</div>
+<div>Bachelor of Technology</div>
+<div class="text-outline">Class of 2024</div>
+</div>
+<div class="space-y-2">
+<div class="text-secondary opacity-70">// STATUS</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                            CCNA Candidate
+                        </div>
+<div class="text-outline">Exam Scheduled</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Networking Section (Terminal Dashboard) -->
+<section class="py-32 px-8 md:px-16 bg-surface-container-lowest relative" id="networking">
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-secondary block mb-2">Network Control Panel</span>
+<h2 class="font-headline-md text-headline-md">Systems Infrastructure</h2>
+</div>
+<div class="font-mono text-[12px] text-primary/60 border border-primary/20 px-3 py-1">
+                    System.uptime: 100% | CCNA_TRACK: ACTIVE
+                </div>
+</div>
+<!-- Terminal Window -->
+<div class="bg-[#0f0d0a] border border-outline-variant/30 shadow-2xl overflow-hidden rounded-lg">
+<!-- Terminal Header -->
+<div class="bg-surface-container-highest px-4 py-2 flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+<div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+<div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+</div>
+<div class="font-mono text-[10px] text-on-surface-variant tracking-widest uppercase">ccna-progress-monitor</div>
+<div class="w-12"></div>
+</div>
+<!-- Terminal Body -->
+<div class="p-8 md:p-12 relative">
+<div class="scanline"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 font-mono">
+<!-- Left Column: Tasks -->
+<div class="space-y-10">
+<div>
+<div class="flex justify-between mb-4">
+<span class="text-primary text-[14px]">01. Routing &amp; Switching</span>
+<span class="text-secondary text-[12px] px-2 py-0.5 bg-secondary/10 border border-secondary/20">STATUS: IN_PROGRESS</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+<p class="mt-4 text-[13px] text-on-surface-variant leading-relaxed">
+                                    Mastering static and dynamic routing (OSPFv2), inter-VLAN routing, and STP configurations for stable loop-free topologies.
+                                </p>
+</div>
+<div>
+<div class="flex justify-between mb-4">
+<span class="text-primary text-[14px]">02. IP Connectivity &amp; Services</span>
+<span class="text-secondary text-[12px] px-2 py-0.5 bg-secondary/10 border border-secondary/20">STATUS: IN_PROGRESS</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high">
+<div class="h-full bg-primary" style="width: 70%"></div>
+</div>
+<p class="mt-4 text-[13px] text-on-surface-variant leading-relaxed">
+                                    Configuring and verifying IPv4/IPv6 addressing, NAT/PAT, and essential network services like DHCP, DNS, and SNMP.
+                                </p>
+</div>
+<div>
+<div class="flex justify-between mb-4">
+<span class="text-primary text-[14px]">03. Security Fundamentals</span>
+<span class="text-secondary text-[12px] px-2 py-0.5 bg-secondary/10 border border-secondary/20">STATUS: IN_PROGRESS</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high">
+<div class="h-full bg-primary" style="width: 60%"></div>
+</div>
+<p class="mt-4 text-[13px] text-on-surface-variant leading-relaxed">
+                                    Implementing access control lists (ACLs), port security, and wireless security protocols (WPA2/WPA3) for perimeter defense.
+                                </p>
+</div>
+</div>
+<!-- Right Column: Visual/Output -->
+<div class="bg-surface-container-low/50 border border-outline-variant/10 p-6 rounded relative hidden lg:block overflow-hidden">
+<div class="text-[11px] text-primary/40 mb-4 font-mono select-none">
+                                TOPOLOGY_RENDER_ID: 8849-01
+                            </div>
+<!-- Simple Line Art Network Topology -->
+<div class="flex flex-col items-center justify-center h-full gap-8 py-8 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex gap-16 items-center">
+<span class="material-symbols-outlined text-[48px] text-primary">router</span>
+<div class="w-24 border-t border-dashed border-outline"></div>
+<span class="material-symbols-outlined text-[48px] text-primary">hub</span>
+</div>
+<div class="flex gap-12">
+<span class="material-symbols-outlined text-[32px] text-secondary">computer</span>
+<span class="material-symbols-outlined text-[32px] text-secondary">dns</span>
+<span class="material-symbols-outlined text-[32px] text-secondary">laptop</span>
+</div>
+<div class="text-[11px] text-secondary/60 mt-4 text-center">
+                                    &gt; Analyzing packets...<br/>
+                                    &gt; ICMP Echo Request: Success
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Stack (New Section) -->
+<section class="py-32 px-8 md:px-16 max-w-[1440px] mx-auto" id="stack">
+<div class="mb-16 text-center">
+<span class="font-mono text-[11px] uppercase tracking-widest text-secondary block mb-2">Toolkit &amp; Proficiency</span>
+<h2 class="font-headline-md text-headline-md">Technical Stack</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Badge 1 -->
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col items-center group hover:border-primary/50 transition-all">
+<div class="font-mono text-primary text-[11px] mb-4 opacity-50">PROT::01</div>
+<div class="font-mono font-medium text-[14px]">OSPF / EIGRP</div>
+<div class="mt-4 w-full h-0.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary/40 w-full group-hover:bg-primary transition-all duration-700"></div>
+</div>
+</div>
+<!-- Badge 2 -->
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col items-center group hover:border-primary/50 transition-all">
+<div class="font-mono text-primary text-[11px] mb-4 opacity-50">TOOL::01</div>
+<div class="font-mono font-medium text-[14px]">Packet Tracer</div>
+<div class="mt-4 w-full h-0.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary/40 w-full group-hover:bg-primary transition-all duration-700"></div>
+</div>
+</div>
+<!-- Badge 3 -->
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col items-center group hover:border-primary/50 transition-all">
+<div class="font-mono text-primary text-[11px] mb-4 opacity-50">TOOL::02</div>
+<div class="font-mono font-medium text-[14px]">Wireshark</div>
+<div class="mt-4 w-full h-0.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary/40 w-full group-hover:bg-primary transition-all duration-700"></div>
+</div>
+</div>
+<!-- Badge 4 -->
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col items-center group hover:border-primary/50 transition-all">
+<div class="font-mono text-primary text-[11px] mb-4 opacity-50">LANG::01</div>
+<div class="font-mono font-medium text-[14px]">Python</div>
+<div class="mt-4 w-full h-0.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary/40 w-3/4 group-hover:bg-primary transition-all duration-700"></div>
+</div>
+</div>
+<!-- Badge 5 -->
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col items-center group hover:border-primary/50 transition-all">
+<div class="font-mono text-primary text-[11px] mb-4 opacity-50">OS::01</div>
+<div class="font-mono font-medium text-[14px]">Linux / CLI</div>
+<div class="mt-4 w-full h-0.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary/40 w-full group-hover:bg-primary transition-all duration-700"></div>
+</div>
+</div>
+<!-- Badge 6 -->
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col items-center group hover:border-primary/50 transition-all">
+<div class="font-mono text-primary text-[11px] mb-4 opacity-50">STRUC::01</div>
+<div class="font-mono font-medium text-[14px]">VLANs / Trunk</div>
+<div class="mt-4 w-full h-0.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary/40 w-full group-hover:bg-primary transition-all duration-700"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photography Section (Visual Break/Sensor Data) -->
+<section class="py-32 px-8 md:px-16 max-w-[1440px] mx-auto border-t border-outline-variant/30" id="photography">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-secondary block mb-2">Sensor Data: Visuals</span>
+<h2 class="font-headline-md text-headline-md max-w-lg">Capturing the silent dialogue between light and shadow.</h2>
+</div>
+<p class="font-mono text-[12px] text-on-surface-variant max-w-xs italic text-right opacity-60">
+                [ISO: 400] [LENS: 35MM] [MEDIUM: FILM]
+            </p>
+</div>
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-8 h-[600px] bg-surface-container overflow-hidden group border border-outline-variant/10">
+<img alt="Cinematic Landscape" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="A cinematic, wide-angle photograph of a misty mountain range during blue hour. The lighting is soft and ethereal with a deep mocha and espresso color palette. The composition feels grand and atmospheric, capturing the silent soul of the nocturnal landscape with fine film grain visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRv4zk2MSlY1BuT3TCu7SbH9psi4nBOI38Er6YWJKirBFGlYnTpgcRrFQLOlN5sY4bmxm-6HjLkQFrVLwLDVmOGE_l77__kjh66nv0JwdXGEGlzLLj5Q7hlkuN8re3XEDdWKaLzOcCV6XcVEhhW5zQwTwtzwBKP2-TGLT-uDayKpSnwKoW46G_7HjnMShI4704KJVvgWXgoWo5wbpthNm98nx7tx5razOrw8nUOtxtnY9VP11wXANnY0Yzuot9_9uvbMYrky_AVxM"/>
+</div>
+<div class="col-span-12 md:col-span-4 h-[600px] bg-surface-container flex flex-col justify-end p-8 border border-outline-variant/20">
+<span class="font-mono text-[11px] uppercase tracking-widest text-primary mb-2">DATA_STREAM_01</span>
+<h3 class="font-headline-md text-[24px]">Urban Solitude</h3>
+<p class="mt-4 font-body-md text-on-surface-variant">A study of architectural silence within the chaos of the metropolis.</p>
+</div>
+<div class="col-span-12 md:col-span-4 h-[500px] bg-surface-container overflow-hidden group border border-outline-variant/10">
+<img alt="Architectural Detail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0" data-alt="A minimalist architectural shot featuring clean geometric lines and hard shadows cast on a textured concrete wall. The light is warm, amber-toned late afternoon sun, contrasting with deep espresso shadows. The mood is precise and technical, reflecting a sophisticated editorial aesthetic with earthy, warm dark neutrals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6FFyffeWFzqiLVj_3z9p0U9VVOiPDoAZ_6QKnzEUdUGO4pYpn4YMAcJi3Gpg9FIfPltVHOof9_SQA09reA436-EoosRSbdnCZ-X3FhCg_42Lf2zSSEVTErAmm_Own2g3mUUZlLfjqYov4d2USIbP1RfS2MRx6uaJTXjn5V1QL1u6It1T6bcNJm4WoAso-4PMxPr09Z4ZXLUPZqff2f3zELQgQp5YORpIUrpkau5aHX3qQJz5mu67l2ACZBDx5EEVlvGhcL-JiMow"/>
+</div>
+<div class="col-span-12 md:col-span-8 h-[500px] bg-surface-container overflow-hidden group border border-outline-variant/10">
+<img alt="Nature Abstract" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0" data-alt="A close-up, abstract photograph of wind-swept desert dunes at twilight. The sand ripples create organic patterns in shades of dark mocha and muted amber. The lighting is low-key and dramatic, emphasizing the tactile nature of the environment with a cinematic, poetic feeling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDft5OKetJMyXDdJtljCXHAYtsB-oJJL49gi3g0ohYOSdScFNLenvrzDCodBimO-15sporq6W-kdHBTyVtg2ivBlORHkqjSq6t12lwTPUL0yke1-c0v4g6uTh6Ljs4cxC6-JVMLPflF_TCqj2O1B5vsh6zTOG1nnKK_2FeeEAiAU0m9W0qphiKLHgpzz8H2kUaQ4yMytXpSqAHaFpGOHztYllzIcT7ZPAL1NhNyW2JdJlG38KCYgr0YxWY9Wdjsp7h8chMvj8a8Noo"/>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-32 px-8 md:px-16 bg-surface-container-low border-y border-outline-variant/20" id="blog">
+<div class="max-w-[1440px] mx-auto flex flex-col items-center text-center">
+<span class="font-mono text-[11px] uppercase tracking-widest text-primary mb-6">Execution Log</span>
+<h2 class="font-headline-md text-headline-md mb-12">Technical Notes &amp; Visual Journals</h2>
+<div class="max-w-xl w-full p-1 border border-outline-variant/30 group">
+<div class="bg-surface p-12 relative overflow-hidden">
+<div class="font-mono text-[12px] text-outline-variant italic mb-2 tracking-widest uppercase">system.idle()</div>
+<p class="font-body-md text-on-surface-variant">Reflections on system entropy and the chemistry of light.</p>
+<!-- Decorative element -->
+<div class="absolute -right-8 -bottom-8 w-24 h-24 border border-primary/10 rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-8 md:px-16 max-w-[1440px] mx-auto" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-secondary block mb-4">Request Access</span>
+<h2 class="font-headline-md text-[48px] mb-8">Let's talk about the architecture of your next story.</h2>
+<p class="font-body-lg text-on-surface-variant">Open for junior networking roles, technical consulting, and selected photography commissions.</p>
+</div>
+<div class="flex flex-col justify-end">
+<form class="space-y-8">
+<div class="border-b border-outline-variant focus-within:border-primary transition-colors py-2 flex items-center gap-4">
+<span class="font-mono text-primary text-[12px] opacity-40">INPUT:NAME</span>
+<input class="bg-transparent border-none w-full p-0 font-mono text-on-surface placeholder:text-outline-variant focus:ring-0 text-[14px]" placeholder="..." type="text"/>
+</div>
+<div class="border-b border-outline-variant focus-within:border-primary transition-colors py-2 flex items-center gap-4">
+<span class="font-mono text-primary text-[12px] opacity-40">INPUT:MAIL</span>
+<input class="bg-transparent border-none w-full p-0 font-mono text-on-surface placeholder:text-outline-variant focus:ring-0 text-[14px]" placeholder="..." type="email"/>
+</div>
+<div class="pt-8">
+<button class="flex items-center gap-4 font-mono text-[12px] uppercase tracking-widest text-primary hover:gap-6 transition-all group" type="submit">
+                            [Execute Inquiry]
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-outline-variant bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 md:px-16 mx-auto w-full max-w-[1440px] gap-8 md:gap-0">
+<div class="font-headline-md text-on-surface">SYED</div>
+<div class="font-mono text-[10px] uppercase tracking-widest text-on-surface-variant">
+            © 2024 SYED. SYSTEM BUILD 1.0.42_STABLE
+        </div>
+<div class="flex gap-8">
+<a class="font-mono text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-mono text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-mono text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Terminal</a>
+</div>
+</div>
+</footer>
+</body></html>
