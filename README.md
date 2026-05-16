@@ -39,6 +39,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Place your resume at `public/assets/resume.pdf`.
 
+## Contributing
+
+All work uses **feature branches** and **Pull Requests** — `main` is updated only when you merge on GitHub.
+
+See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for the full workflow and **[BRANCHES.md](./BRANCHES.md)** for issue → branch names.
+
 ## Phases & issues
 
 See **[PHASES.md](./PHASES.md)** for the full checklist (Phase 1–3).
