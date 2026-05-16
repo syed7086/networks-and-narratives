@@ -1,0 +1,22 @@
+name: Phase 1 — Infrastructure
+description: Deploy, CI, or tooling
+title: "[Phase 1] "
+labels: ["phase-1"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      placeholder: "1. ...\n2. ..."
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+    validations:
+      required: true

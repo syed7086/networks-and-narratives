@@ -1,0 +1,41 @@
+name: Phase 2 — Content update
+description: Update portfolio data files (no component changes)
+title: "[Phase 2] "
+labels: ["phase-2"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Edit files under `src/data/` or add assets under `public/assets/`.
+        See [PHASES.md](https://github.com/syed7086/networks-and-narratives/blob/main/PHASES.md).
+  - type: dropdown
+    id: file
+    attributes:
+      label: Which file?
+      options:
+        - src/data/profile.ts
+        - src/data/education.ts
+        - src/data/experience.ts
+        - src/data/projects.ts
+        - src/data/skills.ts
+        - src/data/ccnaProgress.ts
+        - public/assets/resume.pdf
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: What needs to change?
+      placeholder: "- [ ] Replace placeholder university name\n- [ ] Update dates"
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Acceptance criteria
+      placeholder: No placeholder text remains in this section on the live site.
+    validations:
+      required: true

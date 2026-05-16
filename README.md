@@ -39,6 +39,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Place your resume at `public/assets/resume.pdf`.
 
+## Phases & issues
+
+See **[PHASES.md](./PHASES.md)** for the full checklist (Phase 1–3).
+
+Open or track work on GitHub: [Issues](https://github.com/syed7086/networks-and-narratives/issues) · Labels: `phase-1`, `phase-2`, `phase-3`
+
 ## Deploy to Vercel
 
 1. Push this repo to GitHub.

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Phase tracker
+    url: https://github.com/syed7086/networks-and-narratives/blob/main/PHASES.md
+    about: Read the full phase checklist before opening an issue
