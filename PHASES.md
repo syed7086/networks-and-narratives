@@ -5,6 +5,7 @@ Track progress for **Networks & Narratives**. Phase 1 (app scaffold) is complete
 - **Issues:** https://github.com/syed7086/networks-and-narratives/issues  
 - **Labels:** `phase-1` · `phase-2` · `phase-3`  
 - **New issue:** use templates under `.github/ISSUE_TEMPLATE/`
+- **Branches & PRs:** [CONTRIBUTING.md](./CONTRIBUTING.md) · [BRANCHES.md](./BRANCHES.md)
 
 ## Phase 1 — Infrastructure ✅
 
