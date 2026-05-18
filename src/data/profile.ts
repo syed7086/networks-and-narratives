@@ -1,8 +1,8 @@
 import type { Profile } from "@/types/content";
 
 export const profile: Profile = {
-  name: "Syed",
-  displayName: "SYED",
+  name: "Syed Ansharah Sultan",
+  displayName: "SYED ANSHARAH SULTAN",
   headline: "Fresh Graduate & Networking Aspirant",
   tagline:
     "A fresh graduate and networking aspirant building the future of digital connectivity.",
@@ -10,17 +10,17 @@ export const profile: Profile = {
   aboutTitle: "Fresh Graduate & Networking Aspirant",
   ccnaStatus: "candidate",
   ccnaStatusLabel: "CCNA Candidate",
-  ccnaDetail: "Exam Scheduled",
+  ccnaDetail: "Exam Not Scheduled",
   educationSummary: "Bachelor of Technology",
-  educationYear: "Class of 2024",
+  educationYear: "Class of 2025",
   terminalBanner: "System.uptime: 100% | CCNA_TRACK: ACTIVE",
   heroStatusLine: "[root@syed ~]$ status --current-focus",
-  email: "hello@example.com",
-  resumePath: "/assets/resume.pdf",
+  email: "anshara.2017@gmail.com",
+  resumePath: "/assets/Syed_Ansharah_Sultan_Resume.pdf",
   links: {
-    linkedin: "https://linkedin.com/in/",
-    github: "https://github.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://linkedin.com/in/syed-ansharah-sultan",
+    github: "https://github.com/syed7086",
+    instagram: "https://instagram.com/5y3.d",
   },
   contactBlurb:
     "Open for junior networking roles, technical consulting, and selected photography commissions.",
