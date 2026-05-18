@@ -2,14 +2,14 @@ import Link from "next/link";
 import { profile } from "@/data/profile";
 
 const navLinks = [
-  { href: "#hero", label: "01. Home" },
-  { href: "#about", label: "02. Profile" },
-  { href: "#networking", label: "03. Systems" },
-  { href: "#projects", label: "04. Projects" },
-  { href: "#experience", label: "05. Experience" },
-  { href: "#education", label: "06. Education" },
-  { href: "#stack", label: "07. Stack" },
-  { href: "#contact", label: "08. Contact" },
+  { href: "#hero", label: "Home" },
+  { href: "#about", label: "01. Profile" },
+  { href: "#networking", label: "02. Systems" },
+  { href: "#projects", label: "03. Projects" },
+  { href: "#experience", label: "04. Experience" },
+  { href: "#education", label: "05. Education" },
+  { href: "#stack", label: "06. Stack" },
+  { href: "#contact", label: "07. Contact" },
 ];
 
 export function Nav() {

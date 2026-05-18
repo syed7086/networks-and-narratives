@@ -1,5 +1,5 @@
 export type ProjectStatus = "complete" | "in_progress" | "planned";
-export type ProjectCategory = "networking" | "lab" | "automation";
+export type ProjectCategory = "networking" | "lab" | "automation" | "ai & ml" | "software engineering";
 
 export interface Project {
   id: string;
