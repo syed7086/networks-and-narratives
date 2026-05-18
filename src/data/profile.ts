@@ -5,7 +5,7 @@ export const profile: Profile = {
   displayName: "SYED",
   headline: "Fresh Graduate & Networking Aspirant",
   tagline:
-    "A fresh graduate and networking aspirant building the future of digital connectivity.",
+    "A fresh graduate of computer engineering and also a networking aspirant.",
   bio: "I am a recent graduate dedicated to mastering the architecture of the invisible. Currently actively pursuing my CCNA Certification, I focus on the intersection of robust network infrastructure and elegant creative storytelling.",
   aboutTitle: "Fresh Graduate & Networking Aspirant",
   ccnaStatus: "candidate",

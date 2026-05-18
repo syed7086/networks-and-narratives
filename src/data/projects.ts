@@ -2,39 +2,39 @@ import type { Project } from "@/types/content";
 
 export const projects: Project[] = [
   {
-    id: "ospf-lab",
-    title: "3-Router OSPF Lab",
-    category: "networking",
+    id: "ai-medical-diagnosis-tool",
+    title: "AI Medical Diagnosis Tool",
+    category: "ai & ml",
     status: "complete",
-    tools: ["Packet Tracer", "OSPFv2", "VLANs"],
+    tools: ["Python", "FastAPI", "Streamlit"],
     summary:
-      "Multi-router OSPF topology with inter-VLAN routing and loop-free switching design.",
+      "End-to-end AI assistant with Streamlit frontend and FastAPI backend integrated with Google Gemini for structured medical query processing and validated JSON responses.",
     bullets: [
-      "Configured Area 0 backbone with two ABRs",
-      "Verified neighbor adjacencies and route propagation",
-      "Implemented inter-VLAN routing on distribution layer",
+    "Developed a full-stack AI assistant using Streamlit and FastAPI",
+    "Integrated Google Gemini for structured medical query analysis and response generation",
+    "Implemented parsing and re-validation pipeline to ensure JSON consistency and schema accuracy"
     ],
     links: {
-      github: "https://github.com/",
+      github: "https://github.com/syed7086/ai-medical-diagnosis.git",
       demo: null,
     },
     featured: true,
   },
   {
-    id: "acl-security-lab",
-    title: "ACL & Port Security Lab",
+    id: "dsa-python",
+    title: "Data Structures & Algorithms in Python",
     category: "lab",
     status: "in_progress",
-    tools: ["Cisco IOS", "ACLs", "Wireshark"],
+    tools: ["Python", "Algorithms", "Data Structures"],
     summary:
-      "Perimeter hardening lab using extended ACLs, port security, and traffic verification.",
+      "Collection of Python implementations for essential data structures and algorithms focused on problem-solving practice and technical interview preparation.",
     bullets: [
-      "Standard and extended ACLs for inbound/outbound filtering",
-      "Port security on access switches with violation modes",
-      "Captured and analyzed denied traffic in Wireshark",
+    "Implemented core data structures including arrays, linked lists, stacks, queues, trees, and graphs",
+    "Solved algorithmic problems covering sorting, searching, recursion, and dynamic programming",
+    "Built as an ongoing reference repository for interview preparation and DSA practice",
     ],
     links: {
-      github: null,
+      github: "https://github.com/syed7086/Python_DSA.git",
       demo: null,
     },
     featured: true,
@@ -56,6 +56,6 @@ export const projects: Project[] = [
       github: "https://github.com/",
       demo: null,
     },
-    featured: true,
+    featured: false,
   },
 ];

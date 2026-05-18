@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Syed | Networks & Narratives",
+  title: "Syed | Portfolio",
   description:
     "Portfolio of a networking aspirant and CCNA candidate — systems infrastructure, labs, and technical projects.",
   openGraph: {
