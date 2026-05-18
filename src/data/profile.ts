@@ -1,8 +1,8 @@
 import type { Profile } from "@/types/content";
 
 export const profile: Profile = {
-  name: "Syed Ansharah Sultan",
-  displayName: "SYED ANSHARAH SULTAN",
+  name: "Syed",
+  displayName: "SYED",
   headline: "Fresh Graduate & Networking Aspirant",
   tagline:
     "A fresh graduate and networking aspirant building the future of digital connectivity.",
