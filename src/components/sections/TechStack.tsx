@@ -4,6 +4,7 @@ import type { SkillLevel } from "@/types/content";
 const levelWidth: Record<SkillLevel, string> = {
   full: "w-full",
   strong: "w-3/4",
+  intermediate: "w-2/3",
   learning: "w-1/2",
 };
 

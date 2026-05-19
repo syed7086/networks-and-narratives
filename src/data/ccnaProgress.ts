@@ -2,27 +2,43 @@ import type { CcnaProgressItem } from "@/types/content";
 
 export const ccnaProgress: CcnaProgressItem[] = [
   {
-    id: "routing-switching",
-    title: "01. Routing & Switching",
+    id: "network-fundamentals",
+    title: "01. Network Fundamentals",
     status: "IN_PROGRESS",
-    progress: 85,
+    progress: 45,
     description:
-      "Mastering static and dynamic routing (OSPFv2), inter-VLAN routing, and STP configurations for stable loop-free topologies.",
+      "Studying core CCNA concepts including networking models, TCP/IP, OSI layers, Ethernet fundamentals, cabling, switches, and IPv4 subnetting.",
   },
   {
-    id: "ip-connectivity",
-    title: "02. IP Connectivity & Services",
+    id: "switching-basics",
+    title: "02. Switching & VLAN Basics",
     status: "IN_PROGRESS",
-    progress: 70,
+    progress: 25,
     description:
-      "Configuring and verifying IPv4/IPv6 addressing, NAT/PAT, and essential network services like DHCP, DNS, and SNMP.",
+      "Learning MAC address tables, switch operations, VLAN concepts, trunking, and basic inter-VLAN communication.",
   },
   {
-    id: "security",
-    title: "03. Security Fundamentals",
+    id: "ip-addressing",
+    title: "03. IP Addressing & Subnetting",
     status: "IN_PROGRESS",
-    progress: 60,
+    progress: 55,
     description:
-      "Implementing access control lists (ACLs), port security, and wireless security protocols (WPA2/WPA3) for perimeter defense.",
+      "Practicing IPv4 addressing, subnet calculations, CIDR notation, default gateways, and foundational IPv6 concepts.",
+  },
+  {
+    id: "routing-introduction",
+    title: "04. Routing Fundamentals",
+    status: "PLANNED",
+    progress: 0,
+    description:
+      "Preparing to study router operations, static routing, default routes, and dynamic routing protocols like OSPF.",
+  },
+  {
+    id: "network-security-basics",
+    title: "05. Security Fundamentals",
+    status: "PLANNED",
+    progress: 0,
+    description:
+      "Upcoming topics include ACLs, device hardening, port security, and wireless security fundamentals.",
   },
 ];
