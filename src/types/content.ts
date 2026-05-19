@@ -59,7 +59,7 @@ export interface Profile {
   footerBuild: string;
 }
 
-export type SkillLevel = "full" | "strong" | "learning";
+export type SkillLevel = "full" | "strong" | "intermediate" | "learning";
 
 export interface Skill {
   id: string;
