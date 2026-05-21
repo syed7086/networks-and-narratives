@@ -1,6 +1,7 @@
 import { ccnaProgress } from "@/data/ccnaProgress";
 import { profile } from "@/data/profile";
-import { MaterialIcon } from "@/components/ui/MaterialIcon";
+// import { MaterialIcon } from "@/components/ui/MaterialIcon";
+import { TopologyPanel } from "../ui/TopologyPanel";
 
 export function NetworkingDashboard() {
   return (
@@ -61,43 +62,7 @@ export function NetworkingDashboard() {
                 ))}
               </div>
 
-              <div className="relative hidden overflow-hidden rounded border border-outline-variant/10 bg-surface-container-low/50 p-6 lg:block">
-                <div className="mb-4 select-none font-mono text-[11px] text-primary/40">
-                  TOPOLOGY_RENDER_ID: 8849-01
-                </div>
-                <div className="flex h-full flex-col items-center justify-center gap-8 py-8 opacity-60 grayscale transition-all hover:grayscale-0">
-                  <div className="flex items-center gap-16">
-                    <MaterialIcon
-                      name="router"
-                      className="text-[48px] text-primary"
-                    />
-                    <div className="w-24 border-t border-dashed border-outline" />
-                    <MaterialIcon
-                      name="hub"
-                      className="text-[48px] text-primary"
-                    />
-                  </div>
-                  <div className="flex gap-12">
-                    <MaterialIcon
-                      name="computer"
-                      className="text-[32px] text-secondary"
-                    />
-                    <MaterialIcon
-                      name="dns"
-                      className="text-[32px] text-secondary"
-                    />
-                    <MaterialIcon
-                      name="laptop"
-                      className="text-[32px] text-secondary"
-                    />
-                  </div>
-                  <div className="mt-4 text-center text-[11px] text-secondary/60">
-                    &gt; Analyzing packets...
-                    <br />
-                    &gt; ICMP Echo Request: Success
-                  </div>
-                </div>
-              </div>
+              <TopologyPanel category="networking" />
             </div>
           </div>
         </div>
