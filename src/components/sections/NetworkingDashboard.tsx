@@ -3,21 +3,23 @@ import { profile } from "@/data/profile";
 // import { MaterialIcon } from "@/components/ui/MaterialIcon";
 import { TopologyPanel } from "../ui/TopologyPanel";
 
+
+
 export function NetworkingDashboard() {
   return (
     <section
       id="networking"
-      className="relative bg-surface-container-lowest px-8 py-32 md:px-16"
+      className="relative bg-surface-container-lowest px-4 py-24 md:px-16 md:py-32"
     >
       <div className="relative z-10 mx-auto max-w-[1440px]">
-        <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
           <div>
             <span className="mb-2 block font-mono text-[11px] uppercase tracking-widest text-secondary">
               Network Control Panel
             </span>
             <h2 className="font-headline-md">Systems Infrastructure</h2>
           </div>
-          <div className="border border-primary/20 px-3 py-1 font-mono text-[12px] text-primary/60">
+          <div className="inline-block self-start border border-primary/20 px-3 py-1 font-mono text-[10px] text-primary/60 sm:text-[12px]">
             {profile.terminalBanner}
           </div>
         </div>
@@ -35,17 +37,17 @@ export function NetworkingDashboard() {
             <div className="w-12" />
           </div>
 
-          <div className="relative p-8 md:p-12">
+          <div className="relative p-5 md:p-12">
             <div className="scanline" />
             <div className="grid grid-cols-1 gap-12 font-mono lg:grid-cols-2">
               <div className="space-y-10">
                 {ccnaProgress.map((item) => (
                   <div key={item.id}>
-                    <div className="mb-4 flex justify-between">
+                    <div className="mb-4 flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
                       <span className="text-[14px] text-primary">
                         {item.title}
                       </span>
-                      <span className="border border-secondary/20 bg-secondary/10 px-2 py-0.5 text-[12px] text-secondary">
+                      <span className="w-fit border border-secondary/20 bg-secondary/10 px-2 py-0.5 text-[11px] text-secondary sm:text-[12px]">
                         STATUS: {item.status}
                       </span>
                     </div>
@@ -62,7 +64,7 @@ export function NetworkingDashboard() {
                 ))}
               </div>
 
-              <TopologyPanel category="networking" />
+              <TopologyPanel interval={5000} />
             </div>
           </div>
         </div>
